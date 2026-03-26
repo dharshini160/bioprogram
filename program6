@@ -1,0 +1,11 @@
+dna = input("Enter DNA sequence: ")
+
+dna = dna.upper()
+
+start = int(input("Enter start position: "))
+
+end = int(input("Enter end position: "))
+
+subsequence = dna[start-1:end]
+
+print("Extracted Subsequence:", subsequence)
