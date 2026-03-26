@@ -1,0 +1,7 @@
+dna = input("Enter DNA sequence: ")
+dna = dna.upper()
+g_count = dna.count('G')
+c_count = dna.count('C')
+total_bases = len(dna)
+gc_content = ((g_count + c_count) / total_bases) * 100
+print("GC Content: {:.2f}%".format(gc_content))
