@@ -1,0 +1,13 @@
+dna = input("Enter DNA sequence: ").upper()
+
+motif = input("Enter motif: ").upper()
+
+position = dna.find(motif)
+
+if position != -1:
+
+   print("Motif found at position:", position + 1)
+
+else:
+
+   print("Motif not found")
