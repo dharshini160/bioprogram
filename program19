@@ -1,0 +1,18 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+proteins = {
+   "P1": "MKTLLILAVVAAALA",
+   "P2": "MKAILVVLLYTFATANAD",
+   "P3": "MKWVTFISLLFLFSSAYSRGVFRR",
+   "P4": "MALWMRLLPLLALLALWGPGPG"
+}
+ 
+lengths = []
+for seq in proteins.values():
+   lengths.append(len(seq))
+print("Protein Lengths:", lengths)
+sns.barplot(x=list(proteins.keys()), y=lengths)
+plt.xlabel("Protein ID")
+plt.ylabel("Protein Length")
+plt.title("Protein Length Visualization")
+plt.show()
