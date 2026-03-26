@@ -1,0 +1,23 @@
+codon_table = {
+
+   "UUU": "Phenylalanine", "UUC": "Phenylalanine",
+
+   "UUA": "Leucine", "UUG": "Leucine",
+
+   "CUU": "Leucine", "CUC": "Leucine",
+
+   "AUG": "Methionine (Start)",
+
+   "UAA": "Stop", "UAG": "Stop", "UGA": "Stop"
+
+}
+
+codon = input("Enter RNA Codon: ").upper()
+
+if codon in codon_table:
+
+   print("Amino Acid:", codon_table[codon])
+
+else:
+
+   print("Invalid Codon")
