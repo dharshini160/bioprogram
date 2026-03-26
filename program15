@@ -1,0 +1,15 @@
+>seq1
+ATGCGTACGTAG
+>seq2
+ATGCCCGGTTAA
+>seq3
+ATTTGGCCAA
+Python Program:
+from Bio import SeqIO
+fasta_file = "sample.fasta"
+id_list = []
+for record in SeqIO.parse(fasta_file, "fasta"):
+   id_list.append(record.id)
+print("List of Sequence IDs:")
+for seq_id in id_list:
+   print(seq_id)
