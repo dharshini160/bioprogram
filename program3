@@ -1,0 +1,7 @@
+dna = input("Enter DNA sequence: ")
+dna = dna.upper()
+rev = dna[::-1]
+if dna == rev:
+   print("Palindrome DNA sequence")
+else:
+   print("Not a palindrome DNA sequence")
