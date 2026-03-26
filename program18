@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+dna = input("Enter DNA sequence: ").upper()
+base_count = {'A': 0, 'T': 0, 'G': 0, 'C': 0}
+for base in dna:
+   if base in base_count:
+       base_count[base] += 1
+bases = list(base_count.keys())
+counts = list(base_count.values())
+print("Base Composition:")
+for base in base_count:
+   print(base, ":", base_count[base])
+plt.bar(bases, counts)
+plt.xlabel("DNA Bases")
+plt.ylabel("Count")
+plt.title("Base Composition of DNA Sequence")
+plt.show()
