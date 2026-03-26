@@ -1,0 +1,4 @@
+dna = input("Enter DNA sequence: ")
+dna = dna.upper()
+rna = dna.replace('T', 'U')
+print("RNA Sequence:", rna)
