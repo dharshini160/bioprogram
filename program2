@@ -1,0 +1,12 @@
+dna = input("Enter DNA sequence: ")
+dna = dna.upper()
+valid_bases = "ATGC"
+is_valid = True
+for base in dna:
+   if base not in valid_bases:
+       is_valid = False
+       break
+if is_valid:
+   print("Valid DNA sequence")
+else:
+   print("Invalid DNA sequence")
