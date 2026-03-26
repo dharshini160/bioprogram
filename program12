@@ -1,0 +1,19 @@
+g_count = 0
+c_count = 0
+for nucleotide in dna_sequence:
+if nucleotide == 'G':
+g_count += 1
+elif nucleotide == 'C':
+c_count += 1
+gc_count = g_count + c_count
+total_length = len(dna_sequence)
+iftotal_length == 0:
+gc_content_percentage = 0
+else:
+gc_content_percentage = (gc_count / total_length) * 100
+return (gc_count, total_length, gc_content_percentage)
+dna_sequence = "ATGCTAGCTAGCGATCGATCGA"
+gc_data = calculate_gc_content(dna_sequence)
+print(f"GC Count: {gc_data[0]}")
+print(f"Total Length: {gc_data[1]}")
+print(f"GC Content: {gc_data[2]:.2f}%")
