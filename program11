@@ -1,0 +1,9 @@
+file = open("dna.fasta", "r")
+dna_sequence = ""
+for line in file:
+   # Step 3: Ignore header lines
+if not line.startswith(">"):
+dna_sequence += line.strip()
+file.close()
+print("DNA Sequence:")
+print(dna_sequence)
