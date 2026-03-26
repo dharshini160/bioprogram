@@ -1,0 +1,35 @@
+amino_acid_weights = {
+   'A': 89.1,  # Alanine
+   'R': 174.2, # Arginine
+   'N': 132.1, # Asparagine
+   'D': 133.1, # Aspartic Acid
+   'C': 121.2, # Cysteine
+   'E': 147.1, # Glutamic Acid
+   'Q': 146.2, # Glutamine
+   'G': 75.1,  # Glycine
+   'H': 155.2, # Histidine
+   'I': 131.2, # Isoleucine
+   'L': 131.2, # Leucine
+   'K': 146.2, # Lysine
+   'M': 149.2, # Methionine
+   'F': 165.2, # Phenylalanine
+   'P': 115.1, # Proline
+   'S': 105.1, # Serine
+   'T': 119.1, # Threonine
+   'W': 204.2, # Tryptophan
+   'Y': 181.2, # Tyrosine
+   'V': 117.1  # Valine
+}
+def calculate_molecular_weight(sequence):
+   total_weight = 0
+   for aa in sequence:
+       if aa in amino_acid_weights:
+           total_weight += amino_acid_weights[aa]
+       else:
+           print("Invalid amino acid found:", aa)
+   return total_weight
+protein_seq = input("Enter Protein Sequence: ").upper()
+protein_data = {}
+protein_data[protein_seq] = calculate_molecular_weight(protein_seq)
+print("Protein Molecular Weight Dictionary:")
+print(protein_data)
