@@ -1,0 +1,12 @@
+from Bio.Seq import Seq
+def reverse_seq(sequence):
+   if len(sequence) <= 1:
+       return sequence
+   else:
+       return sequence[-1] + reverse_seq(sequence[:-1])
+dna = Seq("ATGCGTAC")
+reversed_sequence = reverse_seq(str(dna))
+ 
+reversed_seq_obj = Seq(reversed_sequence)
+print("Original Sequence :", dna)
+print("Reversed Sequence :", reversed_seq_obj)
