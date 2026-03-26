@@ -1,0 +1,13 @@
+from Bio.Seq import Seq
+dna_sequence = input("Enter DNA sequence: ")
+dna_sequence = dna_sequence.upper().replace(" ", "")
+codons = []
+for i in range(0, len(dna_sequence) - 2, 3):
+   codons.append(dna_sequence[i:i+3])
+dna_seq = Seq(dna_sequence)
+protein = dna_seq.translate()
+print("\nCodons List:")
+print(codons)
+ 
+print("\nProtein Sequence:")
+print(protein)
