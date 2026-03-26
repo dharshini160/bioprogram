@@ -1,0 +1,13 @@
+dna = input("Enter DNA sequence: ").upper()
+
+codons = []
+
+for i in range(0, len(dna), 3):
+
+   codon = dna[i:i+3]
+
+   if len(codon) == 3:
+
+       codons.append(codon)
+
+print("Codon List:", codons)
