@@ -1,0 +1,37 @@
+dna = input("Enter DNA sequence: ")
+
+dna = dna.upper()
+
+A = T = G = C = 0
+
+for base in dna:
+
+   if base == 'A':
+
+       A += 1
+
+   elif base == 'T':
+
+       T += 1
+
+   elif base == 'G':
+
+       G += 1
+
+   elif base == 'C':
+
+       C += 1
+
+ 
+
+length = len(dna)
+
+print("Length of DNA sequence:", length)
+
+print("Adenine (A):", A)
+
+print("Thymine (T):", T)
+
+print("Guanine (G):", G)
+
+print("Cytosine (C):", C)
