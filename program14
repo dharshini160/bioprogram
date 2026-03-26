@@ -1,0 +1,13 @@
+sequences = {}
+n = int(input("Enter number of sequences: "))
+for i in range(n):
+   seq_id = input("\nEnter sequence ID: ")
+   seq = input("Enter sequence: ").upper()
+   sequences[seq_id] = seq
+motif = input("\nEnter motif to search: ").upper()
+print("\nMotif Search Results:")
+for seq_id, seq in sequences.items():
+   if motif in seq:
+       print(f"Motif found in {seq_id}: {seq}")
+   else:
+       print(f"Motif not found in {seq_id}")
